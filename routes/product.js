@@ -1,12 +1,13 @@
 const express = require("express");
 const { getAll, createProduct, editProduct, deleteProduct } = require("../controllers/productController");
+const { validateData } = require("../middleware/validateData");
 const router = express.Router();
 
 router.get("/", getAll);
 
-router.post("/", createProduct);
+router.post("/", validateData, createProduct);
 
-router.put("/:id", editProduct);
+router.put("/:id", validateData, editProduct);
 
 router.delete("/:id", deleteProduct);
 

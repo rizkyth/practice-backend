@@ -4,5 +4,47 @@
     "title": "data baru",
     "desc": "ini percobaan",
     "price": 2000
+  },
+  {
+    "id": 1753443975781,
+    "title": "data baru middleware",
+    "desc": "ini percobaan",
+    "price": 2000
+  },
+  {
+    "id": 1753444033331,
+    "title": "data baru middleware",
+    "desc": "ini percobaan",
+    "price": 2000
+  },
+  {
+    "id": 1753444338425,
+    "title": "data baru middleware 212 newv",
+    "desc": "ini percobaan",
+    "price": 2000
+  },
+  {
+    "id": 1753453357042,
+    "title": "data cached",
+    "desc": "desc",
+    "price": 1231231
+  },
+  {
+    "id": 1753453689686,
+    "title": "data cached baru",
+    "desc": "desc",
+    "price": 1231231
+  },
+  {
+    "id": 1753453976396,
+    "title": "data cached baru 2",
+    "desc": "desc",
+    "price": 1231231
+  },
+  {
+    "id": 1753454037828,
+    "title": "data cached baru 3",
+    "desc": "desc",
+    "price": 1231231
   }
 ]
