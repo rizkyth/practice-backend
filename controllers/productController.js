@@ -1,9 +1,11 @@
 const { getDataFromCache, setDataToCache, delDataFromCache } = require("../middleware/cache");
 const { getAllProduct, addProduct, updateProduct, deletedDataProduct } = require("../models/productModel");
+const path = require("path");
 
 const keyCache = "product";
 
 async function getAll(req, res) {
+  res.sendFile(path.join(__dirname, "client", "index.html"));
   const cachedData = getDataFromCache(keyCache);
   if (cachedData) {
     console.log("data dari cached");
@@ -12,7 +14,8 @@ async function getAll(req, res) {
   try {
     const product = await getAllProduct();
     setDataToCache(keyCache, product);
-    res.json(product);
+    console.log(product);
+    return res.json(product);
   } catch (error) {
     console.log("error saat mengambil data");
   }

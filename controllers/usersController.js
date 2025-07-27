@@ -20,9 +20,9 @@ async function createUsersToken(req, res) {
       JWT_SECRET,
       { expiresIn: "1h" }
     );
-    res.json({ token });
+    res.status(201).json({ token });
   } catch (err) {
-    console.log("error");
+    console.log("error di middle ware?");
   }
 }
 

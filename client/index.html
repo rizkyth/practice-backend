@@ -1,12 +1,29 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Product List</title>
+    <title>Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <main></main>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto mt-10">
+      <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Product List</h1>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+          <thead class="bg-blue-600 text-white">
+            <tr>
+              <th class="py-3 px-6 text-left">Name</th>
+              <th class="py-3 px-6 text-left">Description</th>
+              <th class="py-3 px-6 text-left">Price</th>
+            </tr>
+          </thead>
+          <tbody id="product-table" class="text-gray-700">
+            <!-- Data produk akan di-render di sini dengan JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

@@ -11,9 +11,9 @@ const authenticateToken = (req, res, next) => {
   }
 
   jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) return res.redirect("/login");
+    if (err) return res.status(403).json({ message: "invalid token" });
     req.user = user;
     next();
   });
 };
-module.exports = authenticateToken;
+module.exports = { authenticateToken };
