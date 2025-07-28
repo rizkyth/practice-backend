@@ -9,11 +9,16 @@ form.addEventListener("submit", async (e) => {
   const password = document.getElementById("password").value.trim();
 
   try {
+    // ketika button di klik lalu memanggil function submit dengan mengirim parameter username, dan passwor
     const data = await submitButton({ username, password });
-    console.log(data.token);
+
+    // lalu jika data berhasil maka data akan menyimpan data token yang dikirim dari backend.
+    // lalu token tersebut di simpan di lokal storage dengan nama token.
     localStorage.setItem("token", data.token);
+    // lalu secara otomatis akan memindahkan ke halaman dasboard atau index.html
     window.location.href = "./index.html";
   } catch (error) {
+    // jika error maka akan mengeluarkan error
     console.log("error di depan");
     // alert(error.message);
   }

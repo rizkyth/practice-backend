@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const filePath = path.join(__dirname, "../data/user.json");
-
+// readdb
 function readDbUser() {
   try {
     const users = JSON.parse(fs.readFileSync(filePath, "utf-8"));
@@ -12,7 +12,7 @@ function readDbUser() {
     return [];
   }
 }
-
+// menulis db untuk data yang baru
 function writeDbUser(data) {
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
@@ -21,14 +21,14 @@ function writeDbUser(data) {
     throw new Error("Could not save data");
   }
 }
-
+// meminta data user
 async function getUsers() {
   return readDbUser();
 }
-
+// membuat data user baru
 async function createUsers({ username, password }) {
   const user = readDbUser();
-
+  console.log(username);
   const newUser = {
     username,
     password,
